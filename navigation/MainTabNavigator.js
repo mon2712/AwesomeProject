@@ -12,6 +12,8 @@ import {MagicTabBar} from '../components/MagicTabBar';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import Login from '../screens/Login';
+import User from '../screens/User';  
 
 
 const HomeStack = createStackNavigator({
@@ -21,18 +23,18 @@ const HomeStack = createStackNavigator({
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',
   tabBarIcon: ({ focused }) => (
-    <Icon name="home" size={30} color="#4F8EF7" />
+    <Icon name="home" size={30} color="#c5c7c7" />
   ),
 };
 
 const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+  Links: Login,
 });
 
 LinksStack.navigationOptions = {
   tabBarLabel: 'Tienda',
   tabBarIcon: ({ focused }) => (
-    <Icon name="basket" size={30} color="#4F8EF7" />
+    <Icon name="basket" size={30} color="#c5c7c7" />
   ),
 };
 
@@ -43,18 +45,18 @@ const SettingsStack = createStackNavigator({
 SettingsStack.navigationOptions = {
   tabBarLabel: 'Notificaciones',
   tabBarIcon: ({ focused }) => (
-    <Icon name="earth" size={30} color="#4F8EF7" />
+    <Icon name="earth" size={30} color="#c5c7c7" />
   ),
 };
 
 const UserStack = createStackNavigator({
-  User: HomeScreen,
+  User: User,
 });
 
 UserStack.navigationOptions = {
   tabBarLabel: 'Usuario',
   tabBarIcon: ({ focused }) => (
-    <Icon name="account" size={30} color="#4F8EF7" />
+    <Icon name="account" size={30} color="#c5c7c7" />
   ),
 };
 
