@@ -4,6 +4,8 @@ import { AppLoading, Asset, Font, Icon } from 'expo';
 
 import AppNavigator from "./navigation/AppNavigator";
 
+import {BaseNavigator} from "./navigation";
+
 export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
@@ -22,7 +24,7 @@ export default class App extends React.Component {
       return (
         <View style={styles.container}>
           {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-          <AppNavigator />
+          <BaseNavigator />
         </View>
       );
     }
@@ -61,3 +63,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
+
+/*import React from 'react';
+import {AppRegistry, View} from 'react-native';
+
+import {BaseNavigator} from "./navigation";
+
+const App = () => (
+    <View style={{
+        flex: 1,
+        backgroundColor: '#293656'
+    }}>
+        <BaseNavigator/>
+    </View>
+);
+
+AppRegistry.registerComponent('tabber', () => App);*/
