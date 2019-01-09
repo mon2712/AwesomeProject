@@ -1,7 +1,7 @@
 import React from 'react';
 import {createAppContainer, createBottomTabNavigator, createStackNavigator} from 'react-navigation';
-import Icon from 'react-native-vector-icons/FontAwesome';
-
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Login from '../screens/Login';
 import {AddButton, Bookmarks, Likes, MagicTabBar, Private, Profile, Settings} from "../components";
 import {Routes} from "./Routes";
 
@@ -11,21 +11,21 @@ const TabsNavigator = createBottomTabNavigator({
         navigationOptions: () => ({
             tabBarIcon: ({tintColor}) => (
                 <Icon
-                    name="bookmark"
+                    name="home"
                     color={tintColor}
-                    size={24}
+                    size={30}
                 />
             )
         })
     },
     [Routes.TabsLikes]: {
-        screen: Likes,
+        screen: Login,
         navigationOptions: () => ({
             tabBarIcon: ({tintColor}) => (
                 <Icon
-                    name="heart"
+                    name="basket"
                     color={tintColor}
-                    size={24}
+                    size={30}
                 />
             )
         })
@@ -38,16 +38,14 @@ const TabsNavigator = createBottomTabNavigator({
                     routes={[
                         {
                             routeName: Routes.OtherScreen,
-                            color: 'red'
+                            color: '#171F33',
+                            icon: 'paw'
                         },
                         {
                             routeName: Routes.OtherScreen,
-                            color: 'green'
-                        },
-                        {
-                            routeName: Routes.OtherScreen,
-                            color: 'blue'
-                        },
+                            color: '#171F33',
+                            icon: 'camera'
+                        }
                     ]}
                 />
             )
@@ -61,9 +59,9 @@ const TabsNavigator = createBottomTabNavigator({
         navigationOptions: () => ({
             tabBarIcon: ({tintColor}) => (
                 <Icon
-                    name="lock"
+                    name="earth"
                     color={tintColor}
-                    size={24}
+                    size={30}
                 />
             )
         })
@@ -73,9 +71,9 @@ const TabsNavigator = createBottomTabNavigator({
         navigationOptions: () => ({
             tabBarIcon: ({tintColor}) => (
                 <Icon
-                    name="user"
+                    name="account"
                     color={tintColor}
-                    size={24}
+                    size={30}
                 />
             )
         })
@@ -84,7 +82,7 @@ const TabsNavigator = createBottomTabNavigator({
     tabBarComponent: MagicTabBar,
     tabBarOptions: {
         showLabel: false,
-        activeTintColor: '#F8F8F8',
+        activeTintColor: '#94B96B',
         inactiveTintColor: '#586589',
         style: {
             backgroundColor: '#171F33'
