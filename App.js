@@ -63,19 +63,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
-
-/*import React from 'react';
-import {AppRegistry, View} from 'react-native';
-
-import {BaseNavigator} from "./navigation";
-
-const App = () => (
-    <View style={{
-        flex: 1,
-        backgroundColor: '#293656'
-    }}>
-        <BaseNavigator/>
-    </View>
-);
-
-AppRegistry.registerComponent('tabber', () => App);*/

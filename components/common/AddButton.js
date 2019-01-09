@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Animated, TouchableOpacity, TouchableWithoutFeedback, View} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {randomColor} from "../../utils/index";
 import {withNavigation} from "react-navigation";
 
@@ -94,7 +94,12 @@ class AddButton extends Component {
                             backgroundColor: route.color,
                         }]}
                         onPress={() => this.actionPressed(route)}
-                    />
+                    >
+                        <Icon
+                            name={route.icon}
+                            style={Styles.iconOptions}
+                        />
+                    </TouchableOpacity>
                 </Animated.View>
             );
         })
@@ -187,11 +192,15 @@ const Styles = {
         width: 80,
         height: 80,
         borderRadius: 50,
-        backgroundColor: '#1DA2FF'
+        backgroundColor: '#94B96B'
     },
     toggleIcon: {
         fontSize: 30,
         color: 'white'
+    },
+    iconOptions:{
+        fontSize: 30,
+        color: '#586589'
     },
     actionsWrapper: {
         position: 'absolute',
@@ -202,9 +211,11 @@ const Styles = {
     },
     actionContent: {
         flex: 1,
-        width: 30,
-        height: 30,
-        borderRadius: 15
+        width: 50,
+        height: 50,
+        borderRadius: 50,
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 };
 
