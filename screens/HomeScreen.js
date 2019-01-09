@@ -24,15 +24,6 @@ export default class HomeScreen extends React.Component {
         <SearchBar style={styles.searchCont}
             lightTheme
             placeholder='Search' />
-        <View>
-        <Avatar
-          small
-          rounded
-          source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"}}
-          onPress={() => console.log("Works!")}
-          activeOpacity={0.7}
-        />
-        </View>
 
         </ScrollView>
       </View>

@@ -11,7 +11,7 @@ import {
     View,
     Linking
   } from 'react-native';
-import { Button } from 'react-native-elements'
+import { Button, SearchBar, Avatar } from 'react-native-elements'
 import { WebBrowser } from 'expo';
 
 
